@@ -1,0 +1,91 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    a{
+        font-weight:600;
+        color: #181818;
+        &:hover{
+            color: #b61984;
+        }
+    }
+    .mainHeader{
+        @include styleDistance(1260px,auto)
+    }
+    .menuPort{
+        line-height: 50px;
+        .navbar-expand-xl {
+            .navbar-nav {
+                .nav-link{
+                    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+   .port{
+       display: flex;
+       justify-content: space-between;
+   }
+   .topBarInMenuCell{
+       display: flex;
+       a{
+           margin-left: 15px;
+           .btButtonWidgetText{
+               color: white;
+           }
+
+       }
+       .btIconWidget {
+        line-height: 60px;
+       }
+   }
+   .space{
+       margin-right: 35px;
+   }
+   .btButtonWidgetLink{
+    box-shadow: 0 0 0 3em #b61984 inset;
+    padding: 0 15px;
+    border-radius: 30px;
+   }
+}
+
+// responsive
+
+@include responsive("extra-large"){
+    header{
+        .btPageWrap{
+            background-color: white;
+            .port{
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+            
+                .logo{
+                    .logoTabula{
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                .menuPort{
+                    background-color: white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+
+    
+
+
+
+
+

@@ -1,0 +1,24 @@
+@mixin styleText($color,$fs,$fw) {
+    color:$color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleDistance($maxwith,$mg) {
+    max-width: $maxwith;
+    margin: $mg;
+}
+
+@mixin responsive($screen) {
+    @if (map-has-key($map:$breakpoints , $key:$screen )) {
+        // Tìm thấy tên màng hình trong danh sách của $breakpoints
+        $value: map-get($map:$breakpoints , $key: $screen );
+        @media screen and(max-width: $value) {
+            @content;
+        }
+    }
+    @else{
+        @warn"Sai tên màn hình"
+    }
+
+}

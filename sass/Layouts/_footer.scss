@@ -1,0 +1,167 @@
+.bt_bb_wrapper{
+    background-image: url(../../img/footer_background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    .bt_bb_port{
+        width: 100%;
+        margin: auto;
+        padding-top: 8em;
+        padding-bottom: 10em;
+        .bt_bb_cell{
+            .contact_footer{
+                width: 100%;
+            }
+        }
+        h5{
+            font-size: 1.55rem;
+            font-weight: 700;
+            padding-bottom: 2em;
+            font-family: "Montserrat",Arial,Helvetica,sans-serif;
+            color: white;
+            margin-left: 10px;
+
+
+        }
+        ul{
+            li{
+                padding-right: 1em;
+                font-size: 0.9em;
+                padding-left: 1em;
+                line-height: 1;
+                list-style: none;
+                span{
+                    color: white;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+
+                }
+            }
+        }
+        .spacing{
+            height: 20px;
+            border-bottom :0.5px solid black ;
+            margin-left: 10px;
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .space{
+            height: 20px;
+        }
+        .bt_bb_contact_form_2{
+            margin-top: 30px;
+            .btNewsletterColumn{
+                ::-webkit-input-placeholder { 
+                    color: white;
+                }
+                input{
+                    border: none;
+                    width: 240px;
+                    border-radius: 50px;
+                    height: 3.1em;
+                    margin-bottom: 10px;
+                    color: white;
+                    background-color: #a9027e;
+                    border: 0.5px solid #b3298b;
+                    text-align: center;
+                    transition: all 0.5s;
+                    &:focus{
+                        border: 0.5px solid white;
+                        outline: none;
+
+                    }
+                }
+               
+            }
+            .btNewsletterButton{
+                button{
+                    border: none;
+                    border-radius: 50px;
+                    height: 3.1em;
+                    width: 240px;
+                    box-shadow: 0 0 0 3em white inset;
+                    color: black;
+                    transition: all 0.5s;
+                    &:hover{
+                        box-shadow: 0 0 0 1px white inset;
+                                    color: white;
+                                    background: #b61984;
+                    }
+                  
+                }
+            } 
+        }       
+    }
+}
+
+
+// RESPONSIVE
+@include responsive("extra-large"){
+    .bt_bb_wrapper{
+        .bt_bb_port{
+            .bt_bb_cell{
+                    .row{
+                        
+                    }
+            }
+        }
+    }
+    
+}
+
+@include responsive("large"){
+    footer{
+        .bt_bb_wrapper{
+            top: 0;
+        }
+        
+       
+    }
+}
+
+@include responsive("large"){
+    footer{
+        .bt_bb_wrapper{
+            top: 0;
+        }
+        
+       
+    }
+}
+@include responsive("medium"){
+    .bt_bb_wrapper{
+        .bt_bb_port{
+            .bt_bb_contact_form_2{
+                .btNewsletterColumn {
+                    input{
+                        width: 100%;
+                    }
+                }
+                .btNewsletterButton{
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }   
+    
+}
+
+@include responsive("small"){
+    .bt_bb_wrapper{
+        .bt_bb_port{
+            .bt_bb_column_content{
+                margin-top: 30px;
+            }
+            .bt_bb_headline_tag{
+                margin-top: 30px;
+            }
+        }
+        
+    }
+}
+
